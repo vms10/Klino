@@ -62,7 +62,7 @@ void GenPhenMapping(TVector<double> &gen, TVector<double> &phen)
 // ------------------------------------
 // Fitness function
 // ------------------------------------
-double EvaluationFunction(TVector<double> &v, RandomState &rs)
+double EvaluationFunction(TVector<double> &v, RandomState &rs) // cual ee
 {
 	double t,fitness=0.0;
 	double fA,accdist,totaldist;
