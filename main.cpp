@@ -50,13 +50,13 @@ void GenPhenMapping(TVector<double> &gen, TVector<double> &phen)
 {
 	phen(1) = MapSearchParameter( gen(1), -SensoryWeightRange, SensoryWeightRange); // w_on
 	phen(2) = MapSearchParameter( gen(2), -SensoryWeightRange, SensoryWeightRange);	// w_off
-	phen(3) = MapSearchParameter( gen(3), 0.0, WeightRange);						// w_osc
-	phen(4) = MapSearchParameter( gen(4), -WeightRange, WeightRange);				// w_osc
+	phen(3) = MapSearchParameter( gen(3), 0.0, WeightRange);						// w_osc o cpg 
+	phen(4) = MapSearchParameter( gen(4), -WeightRange, WeightRange);				// self loop
 	phen(5) = MapSearchParameter( gen(5), -BiasRange, BiasRange);					// bias or threshold
-	phen(6) = MapSearchParameter( gen(6), MinSensorN, MaxSensorN);					// Sensory cell integration time, current
-	phen(7) = MapSearchParameter( gen(7),  MinSensorM, MaxSensorM);					// Sensory cell integration time, past
-	phen(8) = MapSearchParameter( gen(8),  MinSensorD, MaxSensorD);					// Sensory cell time constant delay
-	phen(9) = MapSearchParameter( gen(9), MinNeckTurnGain, MaxNeckTurnGain);		// Neck turning gain
+	phen(6) = MapSearchParameter( gen(6), MinSensorN, MaxSensorN);					// Sensory cell integration time, current (N)
+	phen(7) = MapSearchParameter( gen(7),  MinSensorM, MaxSensorM);					// Sensory cell integration time, past (M)
+	phen(8) = MapSearchParameter( gen(8),  MinSensorD, MaxSensorD);					// Sensory cell time constant delay (D)
+	phen(9) = MapSearchParameter( gen(9), MinNeckTurnGain, MaxNeckTurnGain);		// Neck turning gain o Output gain
 }
 
 // ------------------------------------
